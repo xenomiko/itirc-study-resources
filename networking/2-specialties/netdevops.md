@@ -30,7 +30,7 @@ Finish [CCNA](../1-basics/ccna.md). You need to understand the network before yo
 | Jason Edelman et al., *Network Programmability and Automation* (O'Reilly) | Book | Intermediate | Paid | Solid overview of the field. |
 
 ## Certifications
-Cisco's automation track (previously DevNet Associate, now under the CCNA Automation name as far as I know, so verify) and HashiCorp Terraform Associate. A strong GitHub portfolio matters more than either.
+Cisco's automation track (previously DevNet Associate, now under the CCNA Automation name) and HashiCorp Terraform Associate. A strong GitHub portfolio matters more than either.
 
 ## Project to build
 A Git repo where a pull request changes the intended config of a virtual lab network, a pipeline validates it, and Ansible or Nornir deploys it. Include rollback and a short README.
