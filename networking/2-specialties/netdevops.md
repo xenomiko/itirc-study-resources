@@ -1,36 +1,30 @@
 # NetDevOps
 
-## What this role does
-Treats the network as code: automates configuration, validation, and deployment with Python, Git, and CI/CD instead of typing commands device by device. Network engineers who can code are in strong demand.
+**Role:** automates network config, validation, and deployment with Python, Git, and CI/CD.
+**Prerequisites:** [CCNA](../1-basics/ccna.md), basic Linux.
 
-## Prerequisites
-Finish [CCNA](../1-basics/ccna.md). You need to understand the network before you automate it. Basic Linux and the command line are required.
-
-## Skills to learn, in order
-1. Python fundamentals
-2. Git and GitHub workflows
-3. Network automation libraries: Netmiko, NAPALM, Nornir
-4. Ansible for network devices
-5. APIs and data models: REST, NETCONF/RESTCONF, YANG, JSON/YAML
-6. Source of truth and IaC: NetBox, Terraform, templating with Jinja2
-7. CI/CD pipelines that test and deploy network changes
+## Skills, in order
+1. Python, then Git/GitHub
+2. Netmiko, NAPALM, Nornir
+3. Ansible for network devices
+4. APIs and data models: REST, NETCONF, YANG, JSON/YAML
+5. Source of truth (NetBox) and Terraform
+6. CI/CD for network changes
 
 ## Resources
 | Resource | Type | Level | Free/Paid | Notes |
 |---|---|---|---|---|
-| [Automate the Boring Stuff with Python](https://automatetheboringstuff.com) | Online book | Beginner | Free | Best free start for Python if you're new to coding. |
-| [Pro Git](https://git-scm.com/book) | Online book | Beginner | Free | The official Git book. |
-| Kirk Byers, Python for Network Engineers | Free course | Intermediate | Free | Created by the author of Netmiko and NAPALM. Search for the current course page. |
-| [Netmiko](https://github.com/ktbyers/netmiko) / [NAPALM](https://napalm.readthedocs.io) / [Nornir](https://nornir.readthedocs.io) | Libraries/docs | Intermediate | Free | The core Python toolkit. Read the docs and examples. |
-| [Ansible documentation](https://docs.ansible.com) | Docs | Intermediate | Free | See the network automation guides. |
-| [Cisco DevNet](https://developer.cisco.com) | Learning labs + sandboxes | Intermediate | Free | Free sandboxes with real and virtual devices. |
-| [NetBox](https://github.com/netbox-community/netbox) | Tool | Intermediate | Free | The standard open source source-of-truth. Run it in a container. |
-| [Containerlab](https://containerlab.dev) | Lab tool | Intermediate | Free | Build test topologies you can tear down and recreate from code. |
-| Packet Pushers Network Automation Nerds | Podcast/community | Intermediate | Free | Practitioner discussions. |
-| Jason Edelman et al., *Network Programmability and Automation* (O'Reilly) | Book | Intermediate | Paid | Solid overview of the field. |
+| [CS50P: Intro to Python](https://cs50.harvard.edu/python/) | University course | Beginner | Free | Best free Python start. |
+| [GitHub Skills](https://skills.github.com) | Interactive courses | Beginner | Free | Learn Git and GitHub workflows hands-on. |
+| [Kirk Byers: Python for Network Engineers](https://pynet.twb-tech.com) | Course | Intermediate | Free + paid | Taught by the creator of Netmiko and NAPALM. |
+| [Cisco DevNet](https://developer.cisco.com) | Website + sandboxes | Intermediate | Free | Learning labs and free always-on sandboxes. |
+| [David Bombal network automation](https://www.youtube.com/@davidbombal) | YouTube | Intermediate | Free | Python and Ansible for network engineers. |
+| [Network to Code blog](https://networktocode.com/blog/) | Website | Advanced | Free | Industry practices and NetBox/Nautobot content. |
+| [Ansible docs](https://docs.ansible.com) | Website | Intermediate | Free | See the network automation guides. |
+| [HashiCorp Terraform tutorials](https://developer.hashicorp.com/terraform/tutorials) | Tutorials | Intermediate | Free | Infrastructure as code basics. |
 
 ## Certifications
-Cisco's automation track (previously DevNet Associate, now under the CCNA Automation name) and HashiCorp Terraform Associate. A strong GitHub portfolio matters more than either.
+Cisco's automation track (verify the current name), HashiCorp Terraform Associate. A strong GitHub portfolio matters more.
 
-## Project to build
-A Git repo where a pull request changes the intended config of a virtual lab network, a pipeline validates it, and Ansible or Nornir deploys it. Include rollback and a short README.
+## Project
+A Git repo where a pull request changes a virtual lab's config, a pipeline validates it, and Ansible or Nornir deploys it, with rollback.

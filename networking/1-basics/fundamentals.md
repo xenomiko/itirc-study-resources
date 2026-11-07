@@ -1,10 +1,9 @@
 # Fundamentals
 
-Start here if you're new to networking.
-
 | Resource | Type | Level | Free/Paid | Notes |
 |---|---|---|---|---|
-| [Professor Messer Network+](https://www.professormesser.com) | Video course | Beginner | Free | Clear, vendor-neutral tour of the whole syllabus. |
-| [Practical Networking](https://www.practicalnetworking.net) | Articles/videos | Beginner | Free | Best short explanations of subnetting, VLANs, NAT, routing. |
-| [Cloudflare Learning Center](https://www.cloudflare.com/learning/) | Articles | Beginner | Free | Quick primers on DNS, TCP, TLS, DDoS. |
-| [Cisco Networking Academy: Networking Basics](https://www.netacad.com) | Structured course | Beginner | Free | Includes labs, and gives access to Packet Tracer. |
+| [Professor Messer Network+](https://www.professormesser.com) | YouTube / website | Beginner | Free | Clear, complete, vendor-neutral syllabus walkthrough. |
+| [Practical Networking](https://www.practicalnetworking.net) | Website + YouTube | Beginner | Free | Best short explanations of subnetting, VLANs, NAT, routing. |
+| [Cisco Networking Academy: Networking Basics](https://www.netacad.com) | Course | Beginner | Free | Structured, with labs and Packet Tracer access. |
+| [Cloudflare Learning Center](https://www.cloudflare.com/learning/) | Website | Beginner | Free | Quick primers on DNS, TCP, TLS, DDoS. |
+| [NetworkChuck](https://www.youtube.com/@NetworkChuck) | YouTube | Beginner | Free | Motivating intro content. Good for getting started, not for depth. |
