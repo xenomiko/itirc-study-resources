@@ -20,7 +20,7 @@
 | [pwn.college](https://pwn.college) | Official platform — start here. Create a free account and pick a dojo. |
 | [pwn.college Discord](https://discord.gg/pwncollege) | Community server: hints, study groups, and direct access to course staff. |
 | [pwn.college YouTube](https://www.youtube.com/@pwncollege) | Lecture recordings that accompany each dojo (binary exploitation, kernel, etc.). |
-| [My pwn.college solutions](https://github.com/arhouzal/Pwncollege_solution) | Personal write-ups and solutions to pwn.college challenges — use as reference after attempting challenges yourself. |
+| [Aymane's pwn.college solutions](https://github.com/arhouzal/Pwncollege_solution) | Write-ups and solutions by Aymane (hanibal on pwn.college) — use as reference after attempting challenges yourself. |
 
 **Practice by specialty:**
 - Network labs (Packet Tracer, Wireshark, GNS3): [networking labs](../../networking/1-basics/labs-and-tools.md)
