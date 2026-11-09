@@ -35,4 +35,34 @@
 CompTIA Security+, then CySA+ or Cisco CyberOps. Verify current versions.
 
 ## Project
-Wazuh or Security Onion lab with two endpoints. Run three Atomic Red Team tests, write a Sigma rule for each, and document what was and wasn't detected.
+
+### Tutorial projects
+Each project takes about a week (roughly 8 to 12 hours) and covers several skills from the list above. Do them in order, and keep each one in its own Git repo or folder. Run attack tests only in a lab VM.
+
+1. **SOC analyst week** (Beginner, ~1 week)
+   - **Build:** triage ten LetsDefend alerts with ticket-style notes, then write a triage playbook with escalation criteria.
+   - **Practice:** alert triage, escalation, investigation notes, case management.
+   - **Done when:** every alert has a verdict, evidence and a next step, and the playbook covers the alert types you saw.
+2. **Log search and dashboards** (Beginner to Intermediate, ~1 week)
+   - **Build:** ingest sample logs into Splunk, write searches for failed logins, rare processes and data transfers, and build a dashboard with one alert.
+   - **Practice:** log sources, SPL, visualization, alerting.
+   - **Done when:** each search has a documented purpose and a test showing it finds the event.
+3. **Detection engineering** (Intermediate, ~1 week)
+   - **Build:** a Wazuh lab with two endpoints, five Sigma-style detections for ATT&CK techniques, and Atomic Red Team tests for each.
+   - **Practice:** Wazuh, Sigma, ATT&CK, testing detections.
+   - **Done when:** a table shows each technique, the test run, whether it was detected and how you tuned it.
+4. **Full investigation** (Intermediate, ~1 week)
+   - **Build:** solve a CyberDefenders challenge end to end and write an incident report with timeline, indicators and containment advice.
+   - **Practice:** investigation, incident response lifecycle, reporting.
+   - **Done when:** the report can be handed to a manager with no extra explanation.
+
+### Final project
+**Time:** 3 to 4 weeks. A mini SOC: Wazuh or Security Onion monitoring three endpoints (Windows and Linux), with detections kept as code and a simulated incident handled from alert to report.
+
+**Specific to this project:**
+- Ten detections mapped to ATT&CK, stored in Git and tested by CI where possible, with a coverage matrix.
+- True and false positive counts per rule, and what you changed to improve them.
+- Three incident response playbooks and one simulated multi-stage attack with a timeline and report.
+- Alert routing to a notification channel you can show working.
+
+Also meets the [production-like bar](../../README.md#what-production-like-means).

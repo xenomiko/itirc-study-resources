@@ -19,4 +19,3 @@ Every resource is essential unless its description starts with "Supplementary". 
 | [Forensics and Malware](2-specialties/forensics-and-malware.md) | Investigating evidence and reverse engineering malware |
 | [GRC](2-specialties/grc.md) | Policies, risk assessment, frameworks, audits, compliance |
 
-Books are intentionally left out. See [books-and-paid](books-and-paid.md) if you want them.

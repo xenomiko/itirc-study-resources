@@ -37,4 +37,30 @@
 No standard certification. A portfolio of deployed projects matters most.
 
 ## Project
-Deploy a TypeScript and React app with accessible forms, responsive layout, unit tests and a Playwright test. Run a Lighthouse audit and document what you improved.
+
+### Tutorial projects
+Each project takes about a week (roughly 8 to 12 hours) and covers several skills from the list above. Do them in order, and keep each one in its own Git repo or folder.
+
+1. **Responsive multi-page site** (Beginner, ~1 week)
+   - **Build:** a three-page site with semantic HTML, grid and flexbox layout, a contact form and data fetched from a public API with loading and error states.
+   - **Practice:** HTML, CSS layout, responsive design, JavaScript, the DOM.
+   - **Done when:** it works from phone to desktop width with no horizontal scrolling and handles a failed API call.
+2. **React and TypeScript app** (Intermediate, ~1 week)
+   - **Build:** rebuild it in React with TypeScript, routing, typed API calls and unit tests.
+   - **Practice:** TypeScript, components, state, effects, testing.
+   - **Done when:** strict type checking passes and the main flows have tests.
+3. **Accessibility and performance** (Intermediate, ~1 week)
+   - **Build:** audit your app with Lighthouse and the W3C WAI tutorials, fix issues, and add Playwright end-to-end tests.
+   - **Practice:** accessibility, performance, end-to-end testing, keyboard use.
+   - **Done when:** you finish every flow with the keyboard only and Lighthouse scores improve with a documented before and after.
+
+### Final project
+**Time:** 3 to 4 weeks. A deployed TypeScript and React (or Next.js) app with realistic features such as listing, search, forms and a mocked API.
+
+**Specific to this project:**
+- Unit tests plus Playwright tests running in CI on every pull request.
+- A performance budget and accessibility check enforced in CI.
+- Error boundaries, user-friendly error states and basic client-side logging.
+- Preview deployments for pull requests and short decision notes on your main choices.
+
+Also meets the [production-like bar](../../README.md#what-production-like-means).

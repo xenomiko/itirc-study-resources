@@ -40,4 +40,30 @@
 Certified Kubernetes Administrator (CKA), HashiCorp Terraform Associate, AWS Solutions Architect Associate. Verify current exams and prices.
 
 ## Project
-Repo for a small app with a Dockerfile, a Terraform-provisioned environment, a GitHub Actions pipeline (test, scan, build, deploy), Prometheus and Grafana dashboards, one alert, and a written postmortem for an incident you cause on purpose.
+
+### Tutorial projects
+Each project takes about a week (roughly 8 to 12 hours) and covers several skills from the list above. Do them in order, and keep each one in its own Git repo or folder. Use a sandbox account, set billing alerts and destroy resources afterwards.
+
+1. **Containers and CI/CD** (Beginner to Intermediate, ~1 week)
+   - **Build:** a small app with a Dockerfile, a Compose setup and a GitHub Actions pipeline that tests, scans with Trivy, builds and pushes an image.
+   - **Practice:** Linux, Git workflows, Docker, CI/CD, pipeline security.
+   - **Done when:** a failing test or a vulnerable image blocks the pipeline.
+2. **Infrastructure and Kubernetes** (Intermediate, ~1 week)
+   - **Build:** Terraform for an environment and a Kubernetes deployment with config, secrets, scaling and a rolling update, using Killercoda or a local cluster.
+   - **Practice:** Terraform, Kubernetes, configuration management.
+   - **Done when:** you can scale, update and roll back the deployment without downtime.
+3. **Observability and reliability** (Intermediate to Advanced, ~1 week)
+   - **Build:** Prometheus and Grafana dashboards, an SLO with an alert, and a controlled failure experiment.
+   - **Practice:** monitoring, alerting, SLOs, incident response.
+   - **Done when:** the experiment fires your alert and you write a short postmortem.
+
+### Final project
+**Time:** 3 to 4 weeks. A GitOps platform for a small multi-service app: Terraform infrastructure, Kubernetes deployments through Argo CD, and staged environments.
+
+**Specific to this project:**
+- Pipeline that tests, scans, builds and promotes images from staging to production by pull request.
+- SLO dashboards with an alert on error budget burn, and a tested rollback.
+- Secrets handled outside Git and least-privilege access for the pipeline.
+- An incident drill with a written postmortem, plus a cost note and teardown.
+
+Also meets the [production-like bar](../../README.md#what-production-like-means).

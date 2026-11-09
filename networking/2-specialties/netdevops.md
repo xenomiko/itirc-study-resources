@@ -38,4 +38,34 @@
 Cisco's automation certification track and HashiCorp Terraform Associate. A strong GitHub portfolio matters more.
 
 ## Project
-A Git repo where a pull request changes a virtual lab's config, a pipeline validates it (pyATS or Nornir checks), and Ansible or Nornir deploys it, with rollback.
+
+### Tutorial projects
+Each project takes about a week (roughly 8 to 12 hours) and covers several skills from the list above. Do them in order, and keep each one in its own Git repo or folder.
+
+1. **Inventory-driven collector** (Beginner, ~1 week)
+   - **Build:** a Python CLI that reads a YAML inventory, collects `show` output from lab devices with Netmiko, parses it to JSON and writes a CSV report.
+   - **Practice:** Python packaging, Netmiko, YAML/JSON, Git, unit tests.
+   - **Done when:** it runs from a clean virtual environment against three devices and has tests for the parser.
+2. **Config management with Ansible** (Intermediate, ~1 week)
+   - **Build:** Ansible roles with Jinja2 templates for a baseline (NTP, syslog, users, banners), check mode, automatic backups committed to Git and Ansible Vault for secrets.
+   - **Practice:** Ansible, templating, idempotency, secrets handling.
+   - **Done when:** a second run changes nothing and a manual change on a device is detected by check mode.
+3. **Source of truth** (Intermediate, ~1 week)
+   - **Build:** model your lab in NetBox (follow Zero to Hero), then generate device configs from its REST API and deploy them with Nornir and NAPALM.
+   - **Practice:** NetBox, REST APIs, Nornir, NAPALM, config diff and replace.
+   - **Done when:** editing a value in NetBox and rerunning produces a reviewed diff and a successful deployment.
+4. **Validation and CI** (Advanced, ~1 week)
+   - **Build:** pre- and post-change checks with pyATS or Nornir, run by GitHub Actions on every pull request, with lint and template-render tests.
+   - **Practice:** pyATS, CI/CD, testing, rollback.
+   - **Done when:** a deliberately bad change is blocked by the pipeline.
+
+### Final project
+**Time:** 3 to 4 weeks. A network-as-code platform for a virtual lab: a pull request changes data, CI renders and validates configs, and a deployment job applies them with automatic rollback.
+
+**Specific to this project:**
+- NetBox or YAML data as the single source of truth, with schema checks on the data.
+- Staged pipeline: lint, render, deploy to a staging lab, run post-change checks, then promote.
+- Nightly drift detection that opens an issue when a device differs from the source of truth.
+- A postmortem for a bad change you introduced on purpose, showing how the pipeline caught or missed it.
+
+Also meets the [production-like bar](../../README.md#what-production-like-means).

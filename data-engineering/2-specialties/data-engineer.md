@@ -35,4 +35,30 @@
 Cloud vendor certifications are the most common (see [Data Platform Engineer](data-platform-engineer.md)). A strong public pipeline project matters more.
 
 ## Project
-Pipeline that ingests a public API daily into Postgres or DuckDB, writes Parquet to object storage, runs under Airflow or Dagster in Docker Compose, retries on failure, supports a backfill, and has a README with a diagram.
+
+### Tutorial projects
+Each project takes about a week (roughly 8 to 12 hours) and covers several skills from the list above. Do them in order, and keep each one in its own Git repo or folder.
+
+1. **Batch ingestion** (Beginner to Intermediate, ~1 week)
+   - **Build:** a script that pulls a public API, writes raw JSON and clean Parquet, and loads Postgres with upserts, all running in Docker Compose.
+   - **Practice:** Python packaging, file formats, idempotent loads, containers, logging.
+   - **Done when:** running it twice produces no duplicates and queries in DuckDB and Postgres agree.
+2. **Orchestrated pipeline** (Intermediate, ~1 week)
+   - **Build:** schedule project 1 in Airflow (or Dagster) with retries, a backfill, and incremental loading with dlt.
+   - **Practice:** orchestration, backfills, incremental loads, ETL vs ELT.
+   - **Done when:** a forced failure retries, and a backfill of two weeks fills the gaps without duplicates.
+3. **Reliability and CI** (Intermediate, ~1 week)
+   - **Build:** add unit tests, data checks, a Dockerfile and a GitHub Actions workflow, plus failure alerts.
+   - **Practice:** testing, CI/CD, monitoring, alerting.
+   - **Done when:** a bad change fails the build and a failed run sends an alert.
+
+### Final project
+**Time:** 3 to 4 weeks. A daily pipeline with raw, clean and serving layers over a public API, designed to survive schema changes and reruns.
+
+**Specific to this project:**
+- Raw data kept immutable, with replay and backfill supported.
+- Schema change handling and a documented data contract for the output.
+- Freshness and failure alerts, and a test with ten times the normal volume.
+- A cost or storage note for running it for a year.
+
+Also meets the [production-like bar](../../README.md#what-production-like-means).

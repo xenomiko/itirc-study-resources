@@ -51,10 +51,6 @@ To avoid duplicates, common topics live in one place and the other roadmaps link
 - Set billing alerts before any cloud or API lab, use a sandbox account, and delete resources when finished.
 - Keep API keys and secrets out of Git.
 
-## Books
-
-Books are intentionally left out of the roadmaps. Each folder has a `books-and-paid.md` for anyone who wants them.
-
 ## Contributing
 
 See [CONTRIBUTING.md](CONTRIBUTING.md). Courses and tools change often, so corrections to links, prices, free tiers and exam versions are especially welcome.

@@ -32,4 +32,34 @@
 CCNA, then CCNP Enterprise. Juniper JNCIA-Junos is a low-cost second vendor.
 
 ## Project
-Two-site lab: OSPF inside each site, BGP between them, redundant links, and documented failover tests. Build it in Containerlab with FRR.
+
+### Tutorial projects
+Each project takes about a week (roughly 8 to 12 hours) and covers several skills from the list above. Do them in order, and keep each one in its own Git repo or folder.
+
+1. **Campus network** (Beginner, ~1 week)
+   - **Build:** a three-VLAN campus in Packet Tracer with trunks, STP, EtherChannel, DHCP and inter-VLAN routing, plus an IP plan document.
+   - **Practice:** VLANs, trunking, STP root placement, EtherChannel, addressing.
+   - **Done when:** you can fail one trunk member without losing connectivity and explain the `show spanning-tree` output.
+2. **Routed core with OSPF and IPv6** (Intermediate, ~1 week)
+   - **Build:** a four-router FRR core in Containerlab with multi-area OSPF, tuned costs, passive interfaces and dual-stack addressing.
+   - **Practice:** OSPF design, IPv6, convergence, lab-as-code.
+   - **Done when:** a table shows convergence time for three different link failures, and IPv4 and IPv6 both stay reachable.
+3. **Internet edge with BGP** (Intermediate, ~1 week)
+   - **Build:** two autonomous systems with eBGP and iBGP, prefix lists, local-pref and MED policy, VRRP gateways and BFD.
+   - **Practice:** BGP policy, first-hop redundancy, fast failure detection.
+   - **Done when:** your policy moves traffic as documented and BFD failover time is measured.
+4. **Monitoring and troubleshooting** (Advanced, ~1 week)
+   - **Build:** add syslog collection and SNMP or flow-based monitoring to project 3, with alerts for link and neighbor failures. Inject five faults.
+   - **Practice:** SNMP, syslog, NetFlow, structured troubleshooting.
+   - **Done when:** each fault has a log of symptom, method, root cause and fix.
+
+### Final project
+**Time:** 3 to 4 weeks. Build a two-site enterprise network (OSPF inside each site, BGP between them, redundant links and gateways) defined entirely as code in Git.
+
+**Specific to this project:**
+- Containerlab topology and FRR configs in a repo, with an IP addressing plan.
+- A validation script (reachability, routes, neighbor state) that runs in GitHub Actions against the lab on every pull request.
+- Monitoring with at least three alerts, and five failover tests with measured recovery times.
+- A runbook for link failure, BGP session loss and a bad config change.
+
+Also meets the [production-like bar](../../README.md#what-production-like-means).

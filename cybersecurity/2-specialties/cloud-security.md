@@ -35,4 +35,30 @@
 AWS Security Specialty, Azure SC-900 then AZ-500, Google Professional Cloud Security Engineer. Verify current exams.
 
 ## Project
-Take the Terraform VPC from the [cloud networking project](../../networking/2-specialties/cloud-networking.md), scan it with Checkov, fix the findings, then audit with Prowler. Write a short before/after note.
+
+### Tutorial projects
+Each project takes about a week (roughly 8 to 12 hours) and covers several skills from the list above. Do them in order, and keep each one in its own Git repo or folder. Use a sandbox account with billing alerts, and destroy resources when finished.
+
+1. **Identity and logging baseline** (Beginner to Intermediate, ~1 week)
+   - **Build:** least-privilege roles, MFA, audit logging to a protected bucket, and alerts for root or console logins.
+   - **Practice:** IAM, logging, monitoring, shared responsibility.
+   - **Done when:** an allowed action works, a denied one fails, and your own test login triggers an alert.
+2. **Secure infrastructure pipeline** (Intermediate, ~1 week)
+   - **Build:** Terraform for a small workload with Checkov running in GitHub Actions. Fix findings and keep a documented exception list.
+   - **Practice:** IaC scanning, storage exposure, CI gating.
+   - **Done when:** a pull request with an insecure change is blocked and a fixed one passes.
+3. **Posture audit and attack path** (Intermediate to Advanced, ~1 week)
+   - **Build:** audit the sandbox with Prowler, triage the top findings, then exploit one CloudGoat scenario and remediate it.
+   - **Practice:** posture auditing, attack paths, remediation, prioritization.
+   - **Done when:** the CloudGoat attack no longer works and the Prowler report shows the related finding closed.
+
+### Final project
+**Time:** 3 to 4 weeks. A secure account baseline in Terraform (logging, IAM roles, encrypted storage, private networking) with continuous checks and one deliberate misconfiguration found and fixed.
+
+**Specific to this project:**
+- CI gating with Checkov and a scheduled Prowler run that stores its report.
+- Alert rules for risky events and an incident runbook for leaked credentials.
+- A before and after risk report ranking findings by impact.
+- Everything deployable and destroyable from code.
+
+Also meets the [production-like bar](../../README.md#what-production-like-means).

@@ -32,4 +32,30 @@
 PortSwigger Burp Suite Certified Practitioner (paid exam) and eWPT. Verify current details.
 
 ## Project
-Run Juice Shop locally, solve ten challenges, and write each up with root cause, proof and fix. Add an API test that demonstrates one object-level authorization flaw.
+
+### Tutorial projects
+Each project takes about a week (roughly 8 to 12 hours) and covers several skills from the list above. Do them in order, and keep each one in its own Git repo or folder. Run targets on localhost only.
+
+1. **Injection and sessions** (Beginner, ~1 week)
+   - **Build:** complete about fifteen PortSwigger labs on SQL injection, XSS and session handling, and write each up.
+   - **Practice:** HTTP, cookies, SQLi, XSS, Burp Community.
+   - **Done when:** each write-up has root cause, proof and the fix you would make.
+2. **Access control and APIs** (Intermediate, ~1 week)
+   - **Build:** attack Juice Shop's authentication, IDOR and API flaws, then turn what you found into a Postman or script collection with two test users.
+   - **Practice:** authentication, authorization, API Security Top 10, API testing.
+   - **Done when:** your collection reproduces three object-level authorization flaws on demand.
+3. **Break it, then fix it** (Intermediate, ~1 week)
+   - **Build:** write a small web app (Flask or Express) with five planted flaws, exploit each, fix them using the OWASP Cheat Sheets and add regression tests.
+   - **Practice:** secure coding, CSRF, file upload, input handling, testing.
+   - **Done when:** every exploit now fails and a test proves it.
+
+### Final project
+**Time:** 3 to 4 weeks. A full security assessment and remediation of a realistic app (your own or Juice Shop run locally): test plan, findings, fixes in a patched copy and retest.
+
+**Specific to this project:**
+- A written test plan following the OWASP testing approach, with scope and out-of-scope items.
+- At least fifteen findings rated with CVSS, each with proof, root cause and fix.
+- Fixes implemented in a patched copy, with regression tests running in CI.
+- A report with an executive summary and a retest section showing before and after.
+
+Also meets the [production-like bar](../../README.md#what-production-like-means).

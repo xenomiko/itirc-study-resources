@@ -33,4 +33,30 @@
 Associate Android Developer certification is no longer offered, so rely on a published app. Verify current options.
 
 ## Project
-A small app with a list and detail screen, a public API, local caching, offline handling and tests. Publish it to a test track or document how you would.
+
+### Tutorial projects
+Each project takes about a week (roughly 8 to 12 hours) and covers several skills from the list above. Do them in order, and keep each one in its own Git repo or folder.
+
+1. **Core app** (Beginner, ~1 week)
+   - **Build:** a multi-screen app with a list, a detail screen, navigation and state that survives rotation or relaunch.
+   - **Practice:** platform language, UI toolkit, lifecycle, navigation.
+   - **Done when:** the app runs on an emulator and a real device, and state survives lifecycle changes.
+2. **Data and offline** (Intermediate, ~1 week)
+   - **Build:** fetch from a public API, cache in local storage and show cached data offline, with clear loading, empty and error states.
+   - **Practice:** networking, local storage, state handling.
+   - **Done when:** the app works in airplane mode with data from the last sync.
+3. **Quality and release** (Intermediate, ~1 week)
+   - **Build:** permissions handled correctly, secure storage for tokens, unit and UI tests, a profiling pass and a signed release build.
+   - **Practice:** privacy, testing, debugging, release management.
+   - **Done when:** tests pass, a profile shows no obvious jank, and a release build installs on a device.
+
+### Final project
+**Time:** 3 to 4 weeks. An offline-first app with at least four screens and a real use case, ready for a test track.
+
+**Specific to this project:**
+- Safe handling of tokens and user data, with a short privacy note.
+- CI that builds and tests on every pull request.
+- Crash and error handling, with logs you can use to diagnose a failure.
+- A signed release build and store-listing materials (description, screenshots, privacy notes).
+
+Also meets the [production-like bar](../../README.md#what-production-like-means).

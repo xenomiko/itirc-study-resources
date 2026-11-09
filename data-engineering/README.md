@@ -19,4 +19,3 @@ Every resource is essential unless its description starts with "Supplementary".
 | [Data Platform Engineer](2-specialties/data-platform-engineer.md) | Cloud warehouses and lakehouses, infrastructure as code, CI/CD |
 | [DataOps and Data Quality](2-specialties/dataops-and-data-quality.md) | Testing, lineage, observability, governance |
 
-Books are intentionally left out. See [books-and-paid](books-and-paid.md) if you want them.

@@ -36,4 +36,30 @@
 AWS Certified Data Engineer Associate, Google Professional Data Engineer, Microsoft Fabric Data Engineer Associate, SnowPro Core. Verify current exams, names and prices.
 
 ## Project
-Terraform repo that creates a storage bucket, a warehouse dataset or schema, and least-privilege roles, deployed through GitHub Actions on pull requests. Include a diagram, a cost note and a teardown command.
+
+### Tutorial projects
+Each project takes about a week (roughly 8 to 12 hours) and covers several skills from the list above. Do them in order, and keep each one in its own Git repo or folder. Set billing alerts first, use a sandbox account and destroy resources afterwards.
+
+1. **Platform foundations** (Beginner to Intermediate, ~1 week)
+   - **Build:** Terraform that creates a bucket, a warehouse dataset or schema and IAM roles, with variables, remote or local state and outputs.
+   - **Practice:** cloud storage, IAM, Terraform, networking basics.
+   - **Done when:** `apply` and `destroy` work from a clean checkout and the roles follow least privilege.
+2. **Warehouse design and cost control** (Intermediate, ~1 week)
+   - **Build:** load a large public dataset into the BigQuery sandbox (or a trial warehouse), compare partitioned and clustered tables, and set budgets and query limits.
+   - **Practice:** partitioning, clustering, cost models, governance.
+   - **Done when:** a table compares bytes scanned and cost across three layouts.
+3. **CI/CD for infrastructure** (Intermediate, ~1 week)
+   - **Build:** GitHub Actions that run `fmt`, `validate` and `plan` on pull requests and apply to dev after approval, with Infracost as an optional extra.
+   - **Practice:** CI/CD, environments, approvals, cost review.
+   - **Done when:** a pull request shows the plan, and a bad change is blocked.
+
+### Final project
+**Time:** 3 to 4 weeks. A multi-environment data platform (dev and prod) built from Terraform modules, with personas for engineers, analysts and a service account.
+
+**Specific to this project:**
+- Separate least-privilege roles per persona, with a test that proves what each can and cannot do.
+- CI/CD with plan comments, gated apply and drift detection.
+- Budgets, alerts, audit logging and a restore test for critical data.
+- A diagram, cost note and a one-command teardown.
+
+Also meets the [production-like bar](../../README.md#what-production-like-means).

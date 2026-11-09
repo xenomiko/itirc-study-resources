@@ -45,10 +45,34 @@
 CompTIA Security+ first. Then ISACA CISA (audit), CISM (management) or CRISC (risk), or ISO 27001 Lead Implementer or Auditor (paid training). ISC2's entry-level Certified in Cybersecurity has had changing pricing and free-access offers, so check. Verify current requirements and prices.
 
 ## Project
-Run a mock assessment for a fictional 20-person company:
-1. List assets and build a risk register of at least 10 risks in CISO Assistant or a spreadsheet.
-2. Select CIS Controls (Implementation Group 1) and map them to NIST CSF 2.0 functions.
-3. Scan a Linux VM with Lynis or OpenSCAP, record the findings and map each to a control.
-4. Fix three findings and rescan to show before and after.
-5. Write three short policies from the SANS templates.
-6. Run a CISA tabletop scenario and write a one-page after-action report.
+
+### Tutorial projects
+Each project takes about a week (roughly 8 to 12 hours) and covers several skills from the list above. Do them in order, and keep each one in its own Git repo or folder. Run scanners only on VMs you own.
+
+1. **Governance foundation** (Beginner, ~1 week)
+   - **Build:** a fictional 20-person company profile, a role list, a risk method and three policies adapted from the SANS templates.
+   - **Practice:** governance basics, policy writing, roles.
+   - **Done when:** each policy names an owner, scope, review date and the control it supports.
+2. **Risk assessment** (Beginner to Intermediate, ~1 week)
+   - **Build:** an asset inventory and a register of at least fifteen risks in CISO Assistant, each with a treatment plan.
+   - **Practice:** assets, threats, likelihood, impact, treatment.
+   - **Done when:** every risk has an owner, a rating and a decision to mitigate, accept, transfer or avoid.
+3. **Control mapping and testing** (Intermediate, ~1 week)
+   - **Build:** map CIS Controls (Implementation Group 1) to NIST CSF 2.0, scan a Linux VM with Lynis or OpenSCAP, fix three findings and rescan.
+   - **Practice:** frameworks, gap analysis, technical control testing.
+   - **Done when:** each finding maps to a control and the rescan shows the fixes.
+4. **Incident readiness** (Intermediate, ~1 week)
+   - **Build:** run a CISA tabletop scenario with at least two other people, and write an after-action report.
+   - **Practice:** incident response, audit evidence, reporting.
+   - **Done when:** the report lists gaps, owners and due dates.
+
+### Final project
+**Time:** 3 to 4 weeks. An audit-ready security program package for the fictional company, reviewed by a peer playing auditor.
+
+**Specific to this project:**
+- Scope, risk register, control mapping, policies and an evidence folder indexed by control.
+- Technical scan results showing before and after remediation.
+- Tabletop report, a short list of metrics, and a 90-day improvement roadmap.
+- A mock audit: a peer finds at least five gaps and you track them to closure.
+
+Also meets the [production-like bar](../../README.md#what-production-like-means).

@@ -35,4 +35,30 @@
 eJPT (entry), PNPT (practical), then OSCP. Verify current formats and prices.
 
 ## Project
-Pentest report for Metasploitable plus one HTB machine: scope, findings, evidence, ATT&CK mapping and remediation advice.
+
+### Tutorial projects
+Each project takes about a week (roughly 8 to 12 hours) and covers several skills from the list above. Do them in order, and keep each one in its own Git repo or folder. Test only isolated machines you own.
+
+1. **Recon and enumeration** (Beginner, ~1 week)
+   - **Build:** an enumeration report for Metasploitable 2 and one more practice VM using Nmap scan types, service and version detection and script scans.
+   - **Practice:** scanning, enumeration, note-taking, scope.
+   - **Done when:** the report lists every service with evidence, likely weaknesses and the commands used.
+2. **Exploitation methodology** (Beginner to Intermediate, ~1 week)
+   - **Build:** three Starting Point machines plus two Metasploitable services, each exploited once with Metasploit and once manually.
+   - **Practice:** exploitation, manual methods, tool trade-offs, write-ups.
+   - **Done when:** each write-up could be followed by someone else to reproduce the foothold.
+3. **Privilege escalation and post-exploitation** (Intermediate, ~1 week)
+   - **Build:** Linux and Windows privilege escalation on practice machines with HTB Academy modules, using GTFOBins and LOLBAS, plus a pivot between two VMs.
+   - **Practice:** privilege escalation, post-exploitation, pivoting, ATT&CK mapping.
+   - **Done when:** each chain is mapped to ATT&CK techniques and lists the misconfiguration behind every step.
+
+### Final project
+**Time:** 3 to 4 weeks. An engagement-style penetration test of a small environment you build yourself (three to five VMs, including a vulnerable web app and a Windows or Linux server).
+
+**Specific to this project:**
+- Rules of engagement, scope and a test plan written before you start.
+- Findings rated with CVSS, each with evidence, impact and a fix.
+- An executive summary, a technical report and an ATT&CK mapping.
+- Fix the top findings, retest, and show before and after results. Clean up everything you installed.
+
+Also meets the [production-like bar](../../README.md#what-production-like-means).

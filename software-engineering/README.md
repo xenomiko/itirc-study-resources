@@ -19,4 +19,3 @@ Every resource is essential unless its description starts with "Supplementary".
 | [DevOps and SRE](2-specialties/devops-and-sre.md) | CI/CD, containers, infrastructure as code, monitoring, incident response |
 | [AI Engineer](2-specialties/ai-engineer.md) | LLM apps, RAG, agents, evaluation, shipping AI features |
 
-Books are intentionally left out. See [books-and-paid](books-and-paid.md) if you want them.

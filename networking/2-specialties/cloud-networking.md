@@ -35,4 +35,30 @@
 AWS Cloud Practitioner, Solutions Architect Associate, Advanced Networking Specialty. Azure: AZ-900, then AZ-700.
 
 ## Project
-Terraform VPC with public and private subnets, NAT gateway, bastion or SSM access, and a VPN or peering to a second VPC. Include a diagram and a cost note.
+
+### Tutorial projects
+Each project takes about a week (roughly 8 to 12 hours) and covers several skills from the list above. Do them in order, and keep each one in its own Git repo or folder.
+
+1. **Core VPC in Terraform** (Beginner, ~1 week)
+   - **Build:** a VPC across two availability zones with public and private subnets, internet and NAT gateways and route tables, written as a reusable Terraform module. Set a billing alert first.
+   - **Practice:** VPC design, CIDR planning, Terraform modules and variables.
+   - **Done when:** `apply` and `destroy` both run cleanly and your diagram matches the deployed resources.
+2. **Secure access and traffic control** (Intermediate, ~1 week)
+   - **Build:** add security groups, NACLs, SSM access with no bastion, VPC endpoints and flow logs, with a test table.
+   - **Practice:** security groups vs NACLs, private connectivity, logging.
+   - **Done when:** private instances have no public path in, yet can reach required services, and flow logs prove blocked traffic.
+3. **Connectivity and delivery** (Intermediate, ~1 week)
+   - **Build:** a second VPC with peering, private DNS and an internal load balancer in front of two instances.
+   - **Practice:** peering, routing, DNS, load balancing.
+   - **Done when:** traffic is balanced across both AZs and survives the loss of one instance.
+
+### Final project
+**Time:** 3 to 4 weeks. A dev and prod network pair built from shared Terraform modules, hosting a small private app behind a load balancer, with a simulated on-premises site connected by VPN.
+
+**Specific to this project:**
+- CI on pull requests that runs `plan` and a Checkov scan, and a gated `apply`.
+- Flow logs and at least three CloudWatch-style alarms (or the equivalent on your cloud).
+- Monthly cost estimate, billing alert and a tested teardown command.
+- A runbook for lost connectivity, a bad route change and a failed NAT.
+
+Also meets the [production-like bar](../../README.md#what-production-like-means).

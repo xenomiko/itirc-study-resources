@@ -37,4 +37,34 @@
 CompTIA Security+, then Cisco CyberOps, CCNP Security, or Fortinet NSE 4.
 
 ## Project
-Segmented lab: OPNsense, three VLANs (users, servers, DMZ), WireGuard VPN, Suricata alerts. Replay a malware-traffic pcap through Suricata and document what was caught.
+
+### Tutorial projects
+Each project takes about a week (roughly 8 to 12 hours) and covers several skills from the list above. Do them in order, and keep each one in its own Git repo or folder.
+
+1. **Traffic analysis case file** (Beginner, ~1 week)
+   - **Build:** analyze three captures (a port scan, cleartext credentials, a beaconing host) using Wireshark and the TryHackMe traffic rooms, and write a case file for each.
+   - **Practice:** protocols, display filters, baselines, writing findings.
+   - **Done when:** each case file names the hosts, timeline, evidence packets and a recommended control.
+2. **Segmented firewall** (Intermediate, ~1 week)
+   - **Build:** an OPNsense VM with users, servers and DMZ networks, DHCP and DNS, NAT, default-deny rules and logging.
+   - **Practice:** firewall policy, segmentation, NAT, logging.
+   - **Done when:** a test table shows every allowed and blocked flow and the logs prove it.
+3. **VPN and IDS** (Intermediate, ~1 week)
+   - **Build:** add a WireGuard VPN and Suricata to the firewall, write custom rules and replay pcaps through it.
+   - **Practice:** VPNs, IDS rules, tuning, false positives.
+   - **Done when:** three custom rules fire on test traffic, and you tuned away at least one false positive.
+4. **Detection pipeline** (Advanced, ~1 week)
+   - **Build:** run Zeek on the lab traffic and send Suricata and Zeek output to Security Onion (or another log stack), then hunt through a recent Malware-Traffic-Analysis pcap in an isolated VM.
+   - **Practice:** Zeek logs, hunting, alert triage.
+   - **Done when:** your hunt write-up reconstructs the infection timeline from the logs.
+
+### Final project
+**Time:** 3 to 4 weeks. A secure small-office network: segmentation, VPN, IPS, hardened rules and central logging, defended against simulated attacks.
+
+**Specific to this project:**
+- Exported, versioned firewall and IDS configs, plus a tested restore from backup.
+- Attack simulation from a separate attacker VM (scans and replayed malicious traffic), with a detection table showing what was caught.
+- Alert runbook for three alert types and a one-page incident report for one simulated attack.
+- A hardening checklist applied and verified.
+
+Also meets the [production-like bar](../../README.md#what-production-like-means).

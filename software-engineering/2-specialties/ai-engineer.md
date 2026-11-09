@@ -45,4 +45,30 @@
 There is no vendor-neutral standard. Cloud options include AWS AI Practitioner, Azure AI-102 and Google's AI courses. A public project with an evaluation report counts for more. Verify current exams.
 
 ## Project
-RAG assistant over a document set you are allowed to use, with citations, one tool call, and a 30-question evaluation set. Report retrieval hit rate and answer quality before and after one improvement. Add tracing, a cost-per-query figure and a prompt-injection test, and document what it caught and missed.
+
+### Tutorial projects
+Each project takes about a week (roughly 8 to 12 hours) and covers several skills from the list above. Do them in order, and keep each one in its own Git repo or folder. Set a spending limit on every API account and keep keys in environment variables.
+
+1. **LLM client with tools** (Beginner to Intermediate, ~1 week)
+   - **Build:** a command-line app that calls a model API with a system prompt, structured JSON output, one or two tools and streaming, plus tests with a mocked model.
+   - **Practice:** HTTP APIs, prompting, structured outputs, tool use, tokens and cost.
+   - **Done when:** invalid output is caught and retried, and the tool result appears in the final answer.
+2. **RAG with citations** (Intermediate, ~1 week)
+   - **Build:** a retrieval app over documents you may use, with chunking, embeddings and pgvector, returning answers with sources.
+   - **Practice:** embeddings, vector search, chunking trade-offs, retrieval.
+   - **Done when:** you compare two chunking strategies on the same questions and keep the better one with evidence.
+3. **Evaluation and safety** (Intermediate to Advanced, ~1 week)
+   - **Build:** a 30-question evaluation set run with Promptfoo or Ragas, a prompt-injection test set and tracing of cost and latency.
+   - **Practice:** evaluation, regression checks, injection risks, observability.
+   - **Done when:** you can rerun one command to get scores, and know what your injection tests caught and missed.
+
+### Final project
+**Time:** 3 to 4 weeks. A deployed RAG assistant service with an API, authentication, cost caps and an evaluation gate.
+
+**Specific to this project:**
+- A 50-question evaluation set run in CI, blocking changes that lower the score.
+- Prompt and model versions tracked, with before and after results for at least two improvements.
+- Rate limiting, per-user cost caps, and a fallback when the provider fails.
+- Tracing of every request, a prompt-injection test suite and a runbook for bad answers or cost spikes.
+
+Also meets the [production-like bar](../../README.md#what-production-like-means).

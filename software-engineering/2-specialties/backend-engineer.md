@@ -39,4 +39,30 @@
 Cloud associate certifications (AWS Solutions Architect Associate, Azure AZ-204) are common. Verify current exams and prices.
 
 ## Project
-REST API with authentication, a Postgres schema with migrations, an OpenAPI spec, caching, integration tests, structured logging and OpenTelemetry traces. Deploy it with Docker Compose and document one load test result.
+
+### Tutorial projects
+Each project takes about a week (roughly 8 to 12 hours) and covers several skills from the list above. Do them in order, and keep each one in its own Git repo or folder.
+
+1. **Database-backed REST API** (Beginner to Intermediate, ~1 week)
+   - **Build:** a FastAPI or Django API with CRUD, validation, Postgres, migrations and generated docs.
+   - **Practice:** HTTP and REST design, data modeling, migrations.
+   - **Done when:** data survives a restart and the API docs let you exercise every endpoint.
+2. **Authentication and security** (Intermediate, ~1 week)
+   - **Build:** registration and login with hashed passwords, tokens, role-based access and rate limiting, reviewed against the OWASP API Top 10.
+   - **Practice:** authn and authz, secure coding, testing.
+   - **Done when:** user A cannot read user B's data and tests prove it.
+3. **Speed and visibility** (Intermediate to Advanced, ~1 week)
+   - **Build:** Redis caching, a background job queue, structured logs, OpenTelemetry traces and a load test.
+   - **Practice:** caching, queues, observability, performance.
+   - **Done when:** the load test shows the effect of caching and one trace spans API, cache and database.
+
+### Final project
+**Time:** 3 to 4 weeks. A complete service for a realistic domain (for example bookings or inventory) with an OpenAPI contract, deployed with Docker Compose.
+
+**Specific to this project:**
+- Integration tests running in CI against a throwaway database.
+- Health checks, metrics, traces and structured logs, with an alert on error rate.
+- A load test with recorded limits and a backup and restore note for the database.
+- Short decision notes on your main trade-offs, such as caching or queue choices.
+
+Also meets the [production-like bar](../../README.md#what-production-like-means).

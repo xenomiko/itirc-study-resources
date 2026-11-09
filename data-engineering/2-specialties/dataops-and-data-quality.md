@@ -33,4 +33,30 @@
 DAMA CDMP (paid) for data management. Otherwise rely on a portfolio project. Verify current details.
 
 ## Project
-Add quality and lineage to a pipeline from [Data Engineer](data-engineer.md): dbt or Great Expectations tests, a Soda freshness check, OpenLineage events into a local catalog, and a short runbook describing what happens when a check fails.
+
+### Tutorial projects
+Each project takes about a week (roughly 8 to 12 hours) and covers several skills from the list above. Do them in order, and keep each one in its own Git repo or folder. Use a pipeline from [Data Engineer](data-engineer.md) or [Analytics Engineer](analytics-engineer.md) as the base.
+
+1. **Test layer** (Beginner to Intermediate, ~1 week)
+   - **Build:** dbt tests and a Great Expectations suite covering completeness, validity, uniqueness and freshness, then break the data in five ways.
+   - **Practice:** quality dimensions, pipeline testing, failure handling.
+   - **Done when:** each of the five bad batches is caught by the intended check.
+2. **Observability and alerts** (Intermediate, ~1 week)
+   - **Build:** Soda freshness and volume checks, with alerts routed to a channel you can show working, and a simple results dashboard.
+   - **Practice:** observability, anomaly alerts, alert design.
+   - **Done when:** a late load and a volume drop both alert, and a normal run stays quiet.
+3. **Lineage and catalog** (Intermediate to Advanced, ~1 week)
+   - **Build:** emit OpenLineage events from your pipeline into DataHub or OpenMetadata running locally, and add owners and descriptions.
+   - **Practice:** lineage, metadata, ownership, governance.
+   - **Done when:** you can trace a dashboard column back to its source and name its owner.
+
+### Final project
+**Time:** 3 to 4 weeks. A data reliability layer for a full pipeline: contracts, tests, freshness targets, alerting, lineage and an incident process.
+
+**Specific to this project:**
+- A data contract for each output table, enforced in CI.
+- Freshness and quality targets with a scorecard over time.
+- An incident drill: inject a bad batch, detect it, trace impact with lineage, recover and write the postmortem.
+- A runbook describing who is paged and what they do.
+
+Also meets the [production-like bar](../../README.md#what-production-like-means).

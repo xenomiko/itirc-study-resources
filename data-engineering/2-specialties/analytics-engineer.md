@@ -33,4 +33,30 @@
 dbt Analytics Engineering Certification (paid exam). Verify the current format and price.
 
 ## Project
-dbt project on a public dataset with staging, intermediate and mart layers, a star schema, tests on keys and relationships, generated docs, an incremental model, and a Metabase dashboard. Add a GitHub Actions job that runs `dbt build` on pull requests.
+
+### Tutorial projects
+Each project takes about a week (roughly 8 to 12 hours) and covers several skills from the list above. Do them in order, and keep each one in its own Git repo or folder.
+
+1. **Staging and testing** (Beginner to Intermediate, ~1 week)
+   - **Build:** run jaffle-shop, then start your own dbt project on a public dataset with sources, staging models and tests.
+   - **Practice:** dbt basics, sources, naming, key and null tests.
+   - **Done when:** `dbt build` passes and every staging model has a key test.
+2. **Dimensional model** (Intermediate, ~1 week)
+   - **Build:** an intermediate layer and a star schema with one fact and at least two dimensions, with generated docs.
+   - **Practice:** grain, facts and dimensions, layered design, documentation.
+   - **Done when:** the grain of every fact table is stated in its docs and relationship tests pass.
+3. **Incremental models and BI** (Intermediate, ~1 week)
+   - **Build:** an incremental model, a snapshot for a changing dimension and a Metabase dashboard on the marts.
+   - **Practice:** incremental strategies, snapshots, BI tools, stakeholder communication.
+   - **Done when:** new data appends without a full rebuild and the dashboard reads only from marts.
+
+### Final project
+**Time:** 3 to 4 weeks. A production-style dbt project that a team could take over, with metrics defined once and a dashboard on top.
+
+**Specific to this project:**
+- Documented conventions (naming, layering, testing) and a data dictionary.
+- Metric definitions in code through the semantic layer or clearly documented models.
+- GitHub Actions that run `dbt build` on pull requests, and a published docs site.
+- A change log showing one breaking change handled safely.
+
+Also meets the [production-like bar](../../README.md#what-production-like-means).
